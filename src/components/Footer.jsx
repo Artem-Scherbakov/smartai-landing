@@ -5,7 +5,7 @@ import Logo from './Logo.jsx'
 const LINKS = [
   { label: 'Telegram', href: 'https://t.me/' },
   { label: 'Zalo', href: 'https://zalo.me/' },
-  { label: 'Email', href: 'mailto:smartaivn@gmail.com' },
+  { label: 'Email', href: 'mailto:getsmartaivn@gmail.com' },
   { label: 'LinkedIn', href: 'https://linkedin.com/' },
 ]
 

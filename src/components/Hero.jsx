@@ -84,7 +84,7 @@ export default function Hero() {
               📱 {t.hero_cta_telegram}
             </a>
             <a
-              href="mailto:hello@example.com"
+              href="mailto:getsmartaivn@gmail.com"
               className="rounded-lg border border-ink-600 px-5 py-3 text-sm font-semibold text-paper transition hover:border-mist focus-ring"
             >
               📧 {t.hero_cta_email}
