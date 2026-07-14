@@ -6,7 +6,7 @@ const LINKS = [
   { label: 'Telegram', href: 'https://t.me/' },
   { label: 'Zalo', href: 'https://zalo.me/' },
   { label: 'Email', href: 'mailto:getsmartaivn@gmail.com' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/cryptospec/' },
 ]
 
 export default function Footer() {
