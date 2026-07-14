@@ -12,7 +12,7 @@ export default function Contact() {
         <p className="mt-3 text-mist">{t.contact_body}</p>
 
         <a
-          href="mailto:getsmartaivn@gmail.com"
+          href="mailto:hello@example.com"
           className="focus-ring mt-8 inline-block rounded-lg bg-signal px-8 py-4 font-mono text-sm font-semibold text-ink-950 transition hover:brightness-110"
         >
           {t.contact_cta}

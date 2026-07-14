@@ -1,25 +1,29 @@
 import React, { useState } from 'react'
 import { useLang } from '../i18n.jsx'
+import Logo from './Logo.jsx'
 
 export default function Header() {
   const { lang, setLang, t } = useLang()
   const [open, setOpen] = useState(false)
 
   const links = [
+    ['#why', t.nav_why],
     ['#solutions', t.nav_solutions],
     ['#process', t.nav_process],
     ['#cases', t.nav_cases],
+    ['#faq', t.nav_faq],
+    ['#about', t.nav_about],
     ['#contact', t.nav_contact],
   ]
 
   return (
     <header className="sticky top-0 z-50 border-b border-ink-700 bg-ink-900/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <a href="#top" className="font-mono text-sm font-semibold tracking-tight text-paper focus-ring">
-          ai<span className="text-signal">.</span>solutions
+        <a href="#top" className="focus-ring">
+          <Logo />
         </a>
 
-        <nav className="hidden gap-8 md:flex">
+        <nav className="hidden gap-6 lg:flex">
           {links.map(([href, label]) => (
             <a key={href} href={href} className="text-sm text-mist transition hover:text-paper focus-ring">
               {label}
@@ -43,7 +47,7 @@ export default function Header() {
             </button>
           </div>
           <button
-            className="text-mist md:hidden focus-ring"
+            className="text-mist lg:hidden focus-ring"
             onClick={() => setOpen((v) => !v)}
             aria-label="Menu"
             aria-expanded={open}
@@ -56,7 +60,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-ink-700 px-5 py-3 md:hidden">
+        <nav className="flex flex-col gap-1 border-t border-ink-700 px-5 py-3 lg:hidden">
           {links.map(([href, label]) => (
             <a
               key={href}

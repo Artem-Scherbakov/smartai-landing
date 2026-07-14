@@ -70,15 +70,13 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="https://zalo.me/0383134267"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="rounded-lg bg-zalo px-5 py-3 text-sm font-semibold text-white transition hover:bg-zalo-dim focus-ring"
             >
               💬 {t.hero_cta_zalo}
             </a>
             <a
-              href="https://t.me/sherbakov82"
+              href="https://t.me/"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg border border-ink-600 px-5 py-3 text-sm font-semibold text-paper transition hover:border-mist focus-ring"
@@ -86,7 +84,7 @@ export default function Hero() {
               📱 {t.hero_cta_telegram}
             </a>
             <a
-              href="mailto:getsmartaivn@gmail.com"
+              href="mailto:hello@example.com"
               className="rounded-lg border border-ink-600 px-5 py-3 text-sm font-semibold text-paper transition hover:border-mist focus-ring"
             >
               📧 {t.hero_cta_email}
@@ -101,4 +99,3 @@ export default function Hero() {
     </section>
   )
 }
-
