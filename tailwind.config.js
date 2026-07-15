@@ -5,22 +5,23 @@ export default {
     extend: {
       colors: {
         ink: {
-          950: '#0B0F12',
-          900: '#0F1417',
-          800: '#151B1F',
-          700: '#1D252B',
-          600: '#2A343B',
+          950: '#0B1220',
+          900: '#0F1621',
+          800: '#141C29',
+          700: '#1C2733',
+          600: '#2A3844',
         },
         signal: {
-          DEFAULT: '#FFB020',
-          dim: '#B87E17',
+          DEFAULT: '#00D4FF',
+          dim: '#0099FF',
         },
         zalo: {
           DEFAULT: '#0068FF',
           dim: '#3A6FD8',
         },
+        brandGreen: '#22C55E',
         mist: '#8B98A1',
-        paper: '#EDEFF1',
+        paper: '#E6EAF2',
       },
       fontFamily: {
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],

@@ -13,7 +13,7 @@ export default function Why() {
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
           {t.why_items.map((item) => (
             <li key={item} className="flex items-start gap-3 rounded-lg border border-ink-700 bg-ink-900 px-4 py-3">
-              <span className="mt-0.5 font-mono text-signal">✓</span>
+              <span className="mt-0.5 font-mono text-brandGreen">✓</span>
               <span className="text-sm leading-relaxed text-paper">{item}</span>
             </li>
           ))}

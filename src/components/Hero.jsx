@@ -70,13 +70,15 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="#contact"
+              href="https://zalo.me/0383134267"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg bg-zalo px-5 py-3 text-sm font-semibold text-white transition hover:bg-zalo-dim focus-ring"
             >
               💬 {t.hero_cta_zalo}
             </a>
             <a
-              href="https://t.me/"
+              href="https://t.me/sherbakov82"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg border border-ink-600 px-5 py-3 text-sm font-semibold text-paper transition hover:border-mist focus-ring"

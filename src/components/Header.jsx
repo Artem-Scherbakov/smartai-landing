@@ -35,15 +35,21 @@ export default function Header() {
           <div className="flex overflow-hidden rounded-full border border-ink-600 font-mono text-xs">
             <button
               onClick={() => setLang('en')}
-              className={`px-3 py-1.5 transition focus-ring ${lang === 'en' ? 'bg-signal text-ink-950' : 'text-mist hover:text-paper'}`}
+              className={`px-2.5 py-1.5 transition focus-ring ${lang === 'en' ? 'bg-signal text-ink-950' : 'text-mist hover:text-paper'}`}
             >
               EN
             </button>
             <button
               onClick={() => setLang('vi')}
-              className={`px-3 py-1.5 transition focus-ring ${lang === 'vi' ? 'bg-signal text-ink-950' : 'text-mist hover:text-paper'}`}
+              className={`px-2.5 py-1.5 transition focus-ring ${lang === 'vi' ? 'bg-signal text-ink-950' : 'text-mist hover:text-paper'}`}
             >
               VI
+            </button>
+            <button
+              onClick={() => setLang('ru')}
+              className={`px-2.5 py-1.5 transition focus-ring ${lang === 'ru' ? 'bg-signal text-ink-950' : 'text-mist hover:text-paper'}`}
+            >
+              RU
             </button>
           </div>
           <button

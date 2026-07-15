@@ -17,6 +17,11 @@ npm install
 npm run dev
 ```
 
+## Open Graph превью (для Telegram/Zalo/FB)
+
+В `index.html` `og:image` сейчас указан относительным путём — это может не сработать в некоторых мессенджерах. После публикации замени `%BASE_URL%og-image.png` на полный адрес, например:
+`https://<твой-юзернейм>.github.io/ai-business-landing/og-image.png`
+
 ## Что заменить перед публикацией
 
 - `mailto:hello@example.com` → твой email (Hero.jsx, Contact.jsx)
