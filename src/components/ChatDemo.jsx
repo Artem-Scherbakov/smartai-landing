@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useLang } from '../i18n.jsx'
 
 const RULES = [
@@ -15,7 +15,7 @@ const RULES = [
     ru: 'Отлично — я могу обрабатывать наличие номеров, цены и бронирования круглосуточно, даже пока вы спите.',
   },
   {
-    keys: ['dental', 'dentist', 'nha khoa', 'răng', 'стоматолог', 'зуб'],
+    keys: ['dental', 'dentist', 'clinic', 'nha khoa', 'răng', 'стоматолог', 'зуб', 'клиника'],
     en: 'Got it — I can handle appointment scheduling, service pricing and reminders, answered the moment a patient writes in.',
     vi: 'Đã hiểu — tôi có thể xử lý đặt lịch hẹn, giá dịch vụ và nhắc lịch, trả lời ngay khi bệnh nhân nhắn tin.',
     ru: 'Понял — я могу обрабатывать запись на приём, цены на услуги и напоминания, отвечая сразу же, как пациент напишет.',
@@ -46,13 +46,40 @@ function reply(input, lang) {
   return hit ? hit[lang] : FALLBACK[lang]
 }
 
+const PREFILL_MESSAGES = {
+  restaurant: { en: "I run a restaurant", vi: "Tôi mở nhà hàng", ru: "У меня ресторан" },
+  salon: { en: "I have a beauty salon", vi: "Tôi có salon làm đẹp", ru: "У меня салон красоты" },
+  hotel: { en: "We manage a hotel", vi: "Chúng tôi quản lý khách sạn", ru: "Мы управляем отелем" },
+  clinic: { en: "I operate a dental clinic", vi: "Tôi điều hành phòng khám nha khoa", ru: "У меня стоматология" },
+}
+
 export default function ChatDemo() {
   const { t, lang } = useLang()
   const [messages, setMessages] = useState([])
   const [value, setValue] = useState('')
   const [typing, setTyping] = useState(false)
+  const [activeScenario, setActiveScenario] = useState(null)
 
   const canSend = value.trim().length > 0 && !typing
+
+  const loadScenario = (scenarioId) => {
+    setActiveScenario(scenarioId)
+    setMessages([])
+    setTyping(true)
+    
+    // Simulate someone typing the initial message
+    const initialText = PREFILL_MESSAGES[scenarioId][lang] || PREFILL_MESSAGES[scenarioId]['en']
+    
+    setTimeout(() => {
+      setMessages([{ from: 'user', text: initialText }])
+      
+      // Simulate bot replying to the initial message
+      setTimeout(() => {
+        setMessages((m) => [...m, { from: 'bot', text: reply(initialText, lang) }])
+        setTyping(false)
+      }, 700)
+    }, 400)
+  }
 
   const send = () => {
     const text = value.trim()
@@ -73,8 +100,25 @@ export default function ChatDemo() {
     <section className="border-b border-ink-700 bg-ink-950">
       <div className="mx-auto max-w-2xl px-5 py-20">
         <h2 className="text-center font-mono text-xl font-semibold text-paper sm:text-2xl">{t.chat_title}</h2>
+        
+        {/* Scenario Switcher */}
+        <div className="mt-8 flex flex-wrap justify-center gap-2">
+          {Object.entries(t.chat_scenarios).map(([key, label]) => (
+            <button
+              key={key}
+              onClick={() => loadScenario(key)}
+              className={`px-4 py-2 rounded-full text-xs font-mono transition-colors focus-ring ${
+                activeScenario === key 
+                  ? 'bg-signal text-ink-950' 
+                  : 'border border-ink-600 text-mist hover:text-paper hover:border-mist'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
 
-        <div className="mt-8 rounded-xl border border-ink-600 bg-ink-900 shadow-2xl shadow-black/40">
+        <div className="mt-6 rounded-xl border border-ink-600 bg-ink-900 shadow-2xl shadow-black/40">
           <div className="flex items-center gap-2 border-b border-ink-700 px-4 py-3">
             <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]" />
@@ -82,13 +126,13 @@ export default function ChatDemo() {
             <span className="ml-2 font-mono text-xs text-mist">ai.assistant</span>
           </div>
 
-          <div className="flex min-h-[180px] flex-col gap-3 px-4 py-4">
-            {empty && <p className="text-sm text-mist">{t.chat_intro}</p>}
+          <div className="flex min-h-[220px] flex-col gap-3 px-4 py-4 overflow-y-auto max-h-[400px]">
+            {empty && !typing && <p className="text-sm text-mist text-center mt-auto mb-auto">{t.chat_intro}</p>}
 
             {messages.map((m, i) => (
               <div
                 key={i}
-                className={`max-w-[85%] rounded-lg px-3 py-2 text-sm ${
+                className={`max-w-[85%] rounded-lg px-3 py-2 text-sm animate-fadeUp ${
                   m.from === 'user'
                     ? 'self-end rounded-br-sm bg-zalo text-white'
                     : 'self-start rounded-bl-sm bg-ink-700 text-paper'
@@ -99,7 +143,7 @@ export default function ChatDemo() {
             ))}
 
             {typing && (
-              <div className="self-start rounded-lg rounded-bl-sm bg-ink-700 px-3 py-2 text-sm text-mist">
+              <div className="self-start rounded-lg rounded-bl-sm bg-ink-700 px-3 py-2 text-sm text-mist animate-fadeUp">
                 <span className="animate-pulse">···</span>
               </div>
             )}

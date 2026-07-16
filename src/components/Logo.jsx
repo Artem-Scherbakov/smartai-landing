@@ -55,9 +55,6 @@ export default function Logo({ withTagline = false, size = 34 }) {
           <span className="text-paper">Smart</span>
           <span className="text-signal">AI</span>
         </span>
-        <span className="mt-0.5 border-t border-signal/40 pt-0.5 text-[10px] font-semibold tracking-[0.2em] text-signal">
-          VN
-        </span>
         {withTagline && (
           <span className="mt-1 text-[9px] uppercase tracking-[0.15em] text-mist">{t.brand_tagline}</span>
         )}

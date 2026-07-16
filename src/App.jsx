@@ -6,6 +6,8 @@ import Why from './components/Why.jsx'
 import Problem from './components/Problem.jsx'
 import Solutions from './components/Solutions.jsx'
 import Process from './components/Process.jsx'
+import Architecture from './components/Architecture.jsx'
+import Advantages from './components/Advantages.jsx'
 import Cases from './components/Cases.jsx'
 import Faq from './components/Faq.jsx'
 import About from './components/About.jsx'
@@ -24,6 +26,8 @@ export default function App() {
         <Problem />
         <Solutions />
         <Process />
+        <Architecture />
+        <Advantages />
         <Cases />
         <Faq />
         <About />

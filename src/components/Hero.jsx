@@ -29,7 +29,7 @@ function ReplyTimeDemo({ label }) {
 
       <div className="space-y-3 px-4 py-4">
         <div className="max-w-[80%] rounded-lg rounded-bl-sm bg-ink-700 px-3 py-2 text-paper">
-          I own a restaurant.
+          I run a business and need to automate customer support.
         </div>
 
         <div className="flex items-center justify-between px-1">
@@ -42,7 +42,7 @@ function ReplyTimeDemo({ label }) {
         <div className="min-h-[2.5rem]">
           {showReply && (
             <div className="ml-auto max-w-[85%] animate-fadeUp rounded-lg rounded-br-sm bg-zalo px-3 py-2 text-white">
-              Great — I can automate bookings, menu questions and delivery orders.
+              Great — I can automate your bookings, answer questions, and process orders instantly across all channels.
               <span className="ml-0.5 inline-block h-3 w-[2px] animate-blink bg-white align-middle" />
             </div>
           )}
@@ -64,7 +64,7 @@ export default function Hero() {
           <h1 className="font-mono text-3xl font-semibold leading-tight tracking-tight text-paper sm:text-4xl md:text-5xl">
             {t.hero_title_1}
             <br />
-            <span className="text-mist">{t.hero_title_2}</span>
+            <span className="bg-gradient-to-r from-signal to-brandGreen bg-clip-text text-transparent">{t.hero_title_2}</span>
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-mist">{t.hero_body}</p>
 
@@ -73,23 +73,23 @@ export default function Hero() {
               href="https://zalo.me/0383134267"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg bg-zalo px-5 py-3 text-sm font-semibold text-white transition hover:bg-zalo-dim focus-ring"
+              className="rounded-full bg-signal px-6 py-3 text-sm font-semibold text-ink-950 transition hover:bg-signal-dim focus-ring"
             >
-              💬 {t.hero_cta_zalo}
+              {t.hero_cta_zalo}
             </a>
             <a
               href="https://t.me/sherbakov82"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg border border-ink-600 px-5 py-3 text-sm font-semibold text-paper transition hover:border-mist focus-ring"
+              className="rounded-full border border-ink-600 px-6 py-3 text-sm font-semibold text-paper transition hover:border-mist focus-ring"
             >
-              📱 {t.hero_cta_telegram}
+              {t.hero_cta_telegram}
             </a>
             <a
               href="mailto:getsmartaivn@gmail.com"
-              className="rounded-lg border border-ink-600 px-5 py-3 text-sm font-semibold text-paper transition hover:border-mist focus-ring"
+              className="rounded-full border border-ink-600 px-6 py-3 text-sm font-semibold text-paper transition hover:border-mist focus-ring"
             >
-              📧 {t.hero_cta_email}
+              {t.hero_cta_email}
             </a>
           </div>
         </div>
