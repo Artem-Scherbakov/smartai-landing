@@ -2,12 +2,14 @@ import React from 'react'
 import { useLang } from '../i18n.jsx'
 import Logo from './Logo.jsx'
 import { FaTelegramPlane, FaFacebook, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
+import { SiZalo } from 'react-icons/si'
 
 const CONTACT_LINKS = [
   { icon: <FaTelegramPlane />, href: 'https://t.me/sherbakov82' },
-  { icon: <FaFacebook />, href: 'https://facebook.com/' },
+  { icon: <SiZalo />, href: 'https://zalo.me/0383134267' },
+  { icon: <FaFacebook />, href: 'https://www.facebook.com/Artemsherbakov82' },
   { icon: <FaLinkedin />, href: 'https://www.linkedin.com/in/cryptospec/' },
-  { icon: <FaGithub />, href: 'https://github.com/' },
+  { icon: <FaGithub />, href: 'https://github.com/Artem-Scherbakov' },
   { icon: <FaEnvelope />, href: 'mailto:getsmartaivn@gmail.com' },
 ]
 
