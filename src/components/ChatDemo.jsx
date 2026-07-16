@@ -117,7 +117,11 @@ export default function ChatDemo() {
   return (
     <section className="border-b border-ink-700 bg-ink-950">
       <div className="mx-auto max-w-2xl px-5 py-20">
-        <h2 className="text-center font-mono text-xl font-semibold text-paper sm:text-2xl">{t.chat_title}</h2>
+        <div className="text-center mb-8">
+          <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-signal">{t.chat_headline}</p>
+          <h2 className="font-mono text-xl font-semibold text-paper sm:text-3xl mb-4">{t.chat_title}</h2>
+          <p className="max-w-xl mx-auto text-sm text-mist leading-relaxed">{t.chat_description}</p>
+        </div>
         
         {/* Scenario Switcher */}
         <div className="mt-8 flex flex-wrap justify-center gap-2">

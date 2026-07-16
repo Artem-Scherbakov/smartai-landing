@@ -21,11 +21,16 @@ const dict = {
     hero_cta_email: 'Email',
     hero_demo_label: 'live reply time',
 
+    value_eyebrow: 'Why choose SmartAI:',
     value_items: [
       { t: 'Multi-business' },
       { t: 'Multi-language' },
-      { t: 'Cloud or Self-hosted' },
-      { t: 'Fast Deployment' },
+      { t: 'Telegram' },
+      { t: 'Zalo' },
+      { t: 'Website' },
+      { t: 'Human handoff' },
+      { t: 'AI powered' },
+      { t: 'Self-hosted or Cloud' },
     ],
 
     why_eyebrow: 'Why SmartAI',
@@ -68,6 +73,16 @@ const dict = {
 
     architecture_eyebrow: 'How it works',
     architecture_title: 'A unified architecture for all your customer interactions.',
+    architecture_channels: 'Communication Channels',
+    architecture_core_desc: 'AI platform managing conversations, bookings, orders and customer support across all connected channels.',
+    architecture_actions: [
+      'AI Conversations',
+      'Bookings & Appointments',
+      'Orders & Payments',
+      'CRM & Analytics',
+      'Google Sheets',
+      'Human Handoff',
+    ],
     
     advantages_eyebrow: 'Platform Advantages',
     advantages_title: 'Built for scale, designed for simplicity.',
@@ -133,6 +148,8 @@ const dict = {
     },
 
     chat_title: 'Try it — Demo Conversation',
+    chat_headline: 'Live AI Demo',
+    chat_description: 'See how AI answers customer questions, creates bookings and hands conversations over to staff when needed.',
     chat_placeholder: 'Type a message...',
     chat_send: 'Send',
     chat_intro: 'Select a scenario above, or just start typing to see how the AI responds.',
@@ -168,11 +185,16 @@ const dict = {
     hero_cta_email: 'Email',
     hero_demo_label: 'thời gian phản hồi',
 
+    value_eyebrow: 'Tại sao chọn SmartAI:',
     value_items: [
       { t: 'Đa doanh nghiệp' },
       { t: 'Đa ngôn ngữ' },
+      { t: 'Telegram' },
+      { t: 'Zalo' },
+      { t: 'Website' },
+      { t: 'Chuyển giao cho người' },
+      { t: 'Trí tuệ nhân tạo' },
       { t: 'Cloud hoặc Tự lưu trữ' },
-      { t: 'Triển khai nhanh' },
     ],
 
     why_eyebrow: 'Vì sao chọn SmartAI',
@@ -215,6 +237,16 @@ const dict = {
 
     architecture_eyebrow: 'Cách thức hoạt động',
     architecture_title: 'Một kiến trúc thống nhất cho mọi tương tác của khách hàng.',
+    architecture_channels: 'Kênh Liên Lạc',
+    architecture_core_desc: 'Nền tảng AI quản lý các cuộc trò chuyện, đặt chỗ, đơn hàng và hỗ trợ khách hàng trên tất cả các kênh được kết nối.',
+    architecture_actions: [
+      'Hội thoại AI',
+      'Đặt chỗ & Cuộc hẹn',
+      'Đơn hàng & Thanh toán',
+      'CRM & Phân tích',
+      'Google Sheets',
+      'Chuyển giao cho người',
+    ],
     
     advantages_eyebrow: 'Lợi thế của nền tảng',
     advantages_title: 'Được xây dựng để mở rộng, thiết kế cho sự đơn giản.',
@@ -280,6 +312,8 @@ const dict = {
     },
 
     chat_title: 'Thử ngay — Hội thoại Demo',
+    chat_headline: 'Bản dùng thử AI',
+    chat_description: 'Xem cách AI trả lời câu hỏi của khách hàng, tạo đơn đặt chỗ và chuyển cuộc gọi cho nhân viên khi cần thiết.',
     chat_placeholder: 'Nhập tin nhắn...',
     chat_send: 'Gửi',
     chat_intro: 'Chọn một tình huống ở trên, hoặc chỉ cần bắt đầu nhập để xem AI phản hồi như thế nào.',
@@ -315,11 +349,16 @@ const dict = {
     hero_cta_email: 'Email',
     hero_demo_label: 'время ответа',
 
+    value_eyebrow: 'Почему выбирают SmartAI:',
     value_items: [
       { t: 'Мульти-бизнес' },
       { t: 'Мультиязычность' },
+      { t: 'Telegram' },
+      { t: 'Zalo' },
+      { t: 'Веб-сайт' },
+      { t: 'Перевод на человека' },
+      { t: 'На базе ИИ' },
       { t: 'Облако или свой сервер' },
-      { t: 'Быстрое внедрение' },
     ],
 
     why_eyebrow: 'Почему SmartAI',
@@ -362,6 +401,16 @@ const dict = {
 
     architecture_eyebrow: 'Как это работает',
     architecture_title: 'Единая архитектура для всех взаимодействий с клиентами.',
+    architecture_channels: 'Каналы связи',
+    architecture_core_desc: 'AI-платформа управляет диалогами, бронированиями, заказами и поддержкой во всех подключенных каналах.',
+    architecture_actions: [
+      'AI Диалоги',
+      'Бронирование и Запись',
+      'Заказы и Оплата',
+      'CRM и Аналитика',
+      'Google Таблицы',
+      'Перевод на оператора',
+    ],
     
     advantages_eyebrow: 'Преимущества платформы',
     advantages_title: 'Создано для масштабирования, продумано до мелочей.',
@@ -427,6 +476,8 @@ const dict = {
     },
 
     chat_title: 'Попробуйте — Демо диалог',
+    chat_headline: 'Live AI Demo',
+    chat_description: 'Посмотрите, как ИИ отвечает на вопросы клиентов, оформляет бронирования и переводит диалог на оператора при необходимости.',
     chat_placeholder: 'Введите сообщение...',
     chat_send: 'Отправить',
     chat_intro: 'Выберите сценарий выше или просто начните писать, чтобы увидеть, как ответит ИИ.',

@@ -17,7 +17,7 @@ export default function Architecture() {
           {/* Customers & Channels */}
           <div className="w-full md:w-1/4 flex flex-col gap-4">
             <div className="rounded-xl border border-ink-700 bg-ink-900 p-4 text-center">
-              <span className="font-mono text-sm font-semibold text-paper block mb-4">Customers</span>
+              <span className="font-mono text-sm font-semibold text-paper block mb-4">{t.architecture_channels}</span>
               <div className="grid grid-cols-2 gap-2">
                 <div className="flex flex-col items-center justify-center gap-1 rounded bg-ink-800 p-2 text-mist">
                   <FaTelegramPlane className="text-xl" />
@@ -70,7 +70,7 @@ export default function Architecture() {
                   <path d="M20 8c-7.2 0-13 5.2-13 11.6 0 3.6 1.9 6.8 4.9 8.9-.2 1.5-.9 3.4-2.3 4.8 2.6 0 5-1 6.8-2.3 1.1.3 2.3.5 3.6.5 7.2 0 13-5.2 13-11.9S27.2 8 20 8Z" fill="none" stroke="url(#archGrad)" strokeWidth="2.2" />
                   <text x="20" y="24" textAnchor="middle" fontFamily="'IBM Plex Mono', monospace" fontWeight="700" fontSize="11" fill="#E6EAF2">AI</text>
                 </svg>
-                <p className="text-sm text-mist leading-relaxed">Central nervous system handling NLP, context, intent routing, and logic.</p>
+                <p className="text-sm text-mist leading-relaxed">{t.architecture_core_desc}</p>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function Architecture() {
             <div className="rounded-xl border border-ink-700 bg-ink-900 p-4">
               <span className="font-mono text-sm font-semibold text-paper block mb-4 text-center">Business Actions</span>
               <div className="flex flex-col gap-2">
-                {['Bookings & Appointments', 'Orders & Payments', 'CRM & Analytics', 'Google Sheets', 'Human Notifications'].map((item) => (
+                {t.architecture_actions.map((item) => (
                   <div key={item} className="rounded bg-ink-800 px-3 py-2 text-xs font-mono text-mist flex items-center gap-2">
                     <span className="text-signal">•</span> {item}
                   </div>
