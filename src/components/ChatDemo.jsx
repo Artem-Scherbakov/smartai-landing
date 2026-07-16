@@ -35,9 +35,9 @@ const RULES = [
 ]
 
 const FALLBACK_1 = {
-  en: "Any business works — tell me a bit more about what you sell or offer, and I'll show you what could be automated.",
-  vi: 'Ngành nào cũng được — kể thêm cho tôi nghe bạn bán hoặc cung cấp dịch vụ gì, tôi sẽ cho bạn thấy phần nào có thể tự động hoá.',
-  ru: 'Подходит любой бизнес — расскажите чуть подробнее, что вы продаёте или какие услуги оказываете, и я покажу, что можно автоматизировать.',
+  en: "To learn more about how I can help your specific business, let's schedule a free consultation. Message us on Telegram or Zalo (contacts are at the bottom of the page).",
+  vi: 'Để tìm hiểu thêm về cách tôi có thể giúp doanh nghiệp của bạn, hãy đặt lịch tư vấn miễn phí. Nhắn tin cho chúng tôi trên Telegram hoặc Zalo (thông tin liên hệ ở cuối trang).',
+  ru: 'Чтобы узнать обо всех возможностях для вашего бизнеса, запишитесь на бесплатную консультацию. Напишите нам в Telegram или Zalo (контакты указаны внизу страницы).',
 }
 
 const FALLBACK_2 = {
