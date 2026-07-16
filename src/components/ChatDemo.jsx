@@ -12,19 +12,19 @@ const RULES = [
     keys: ['hotel', 'khách sạn', 'khach san', 'resort', 'homestay', 'отель', 'гостиниц'],
     en: 'Perfect — I can handle room availability, pricing and reservations around the clock, even while you sleep.',
     vi: 'Tuyệt vời — tôi có thể xử lý phòng trống, giá phòng và đặt phòng suốt ngày đêm, kể cả khi bạn đang ngủ.',
-    ru: 'Отлично — я могу обрабатывать наличие номеров, цены и бронирования круглосуточно, даже пока вы спите.',
+    ru: 'Отлично — я могу проверять наличие номеров, называть цены и оформлять бронирования круглосуточно, даже пока вы спите.',
   },
   {
     keys: ['dental', 'dentist', 'clinic', 'nha khoa', 'răng', 'стоматолог', 'зуб', 'клиника'],
     en: 'Got it — I can handle appointment scheduling, service pricing and reminders, answered the moment a patient writes in.',
     vi: 'Đã hiểu — tôi có thể xử lý đặt lịch hẹn, giá dịch vụ và nhắc lịch, trả lời ngay khi bệnh nhân nhắn tin.',
-    ru: 'Понял — я могу обрабатывать запись на приём, цены на услуги и напоминания, отвечая сразу же, как пациент напишет.',
+    ru: 'Понял — я могу вести запись на приём, отвечать по ценам на услуги и отправлять напоминания сразу же, как пациент напишет.',
   },
   {
     keys: ['spa', 'massage', 'salon', 'beauty', 'spa', 'salon làm đẹp', 'massage', 'спа', 'массаж', 'салон'],
     en: 'Nice — I can handle booking slots, service menus and prices, so your front desk stops repeating the same answers.',
     vi: 'Hay đấy — tôi có thể xử lý đặt lịch, thực đơn dịch vụ và giá cả, để lễ tân không phải lặp lại câu trả lời mỗi ngày.',
-    ru: 'Хорошо — я могу обрабатывать запись на услуги, прайс-лист и расписание, чтобы администратор не отвечал на одно и то же вручную.',
+    ru: 'Хорошо — я возьму на себя запись на процедуры, ответы по прайс-листу и расписанию, чтобы администратор не отвечал на одно и то же вручную.',
   },
   {
     keys: ['store', 'shop', 'cửa hàng', 'cua hang', 'retail', 'магазин', 'розниц'],
@@ -49,7 +49,7 @@ function reply(input, lang) {
 const PREFILL_MESSAGES = {
   restaurant: { en: "I run a restaurant", vi: "Tôi mở nhà hàng", ru: "У меня ресторан" },
   salon: { en: "I have a beauty salon", vi: "Tôi có salon làm đẹp", ru: "У меня салон красоты" },
-  hotel: { en: "We manage a hotel", vi: "Chúng tôi quản lý khách sạn", ru: "Мы управляем отелем" },
+  hotel: { en: "We manage a hotel", vi: "Chúng tôi quản lý khách sạn", ru: "У меня отель" },
   clinic: { en: "I operate a dental clinic", vi: "Tôi điều hành phòng khám nha khoa", ru: "У меня стоматология" },
 }
 
