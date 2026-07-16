@@ -34,16 +34,27 @@ const RULES = [
   },
 ]
 
-const FALLBACK = {
+const FALLBACK_1 = {
   en: "Any business works — tell me a bit more about what you sell or offer, and I'll show you what could be automated.",
   vi: 'Ngành nào cũng được — kể thêm cho tôi nghe bạn bán hoặc cung cấp dịch vụ gì, tôi sẽ cho bạn thấy phần nào có thể tự động hoá.',
   ru: 'Подходит любой бизнес — расскажите чуть подробнее, что вы продаёте или какие услуги оказываете, и я покажу, что можно автоматизировать.',
 }
 
-function reply(input, lang) {
+const FALLBACK_2 = {
+  en: "Sounds interesting! The best way to see it in action is to book a quick demo. Leave us a message on Zalo or Telegram, and we'll prepare a custom setup for you.",
+  vi: 'Nghe thú vị đấy! Cách tốt nhất là xem bản demo. Hãy nhắn tin cho chúng tôi qua Zalo hoặc Telegram, chúng tôi sẽ chuẩn bị bản demo riêng cho bạn.',
+  ru: 'Звучит отлично! Чтобы увидеть, как это будет работать именно для вас, напишите нам в Telegram или Zalo — мы бесплатно подготовим персональное демо.',
+}
+
+function reply(input, lang, fallbackCount = 0) {
   const lower = input.toLowerCase()
   const hit = RULES.find((r) => r.keys.some((k) => lower.includes(k)))
-  return hit ? hit[lang] : FALLBACK[lang]
+  if (hit) return { text: hit[lang], isFallback: false }
+  
+  return { 
+    text: fallbackCount === 0 ? FALLBACK_1[lang] : FALLBACK_2[lang], 
+    isFallback: true 
+  }
 }
 
 const PREFILL_MESSAGES = {
@@ -59,6 +70,7 @@ export default function ChatDemo() {
   const [value, setValue] = useState('')
   const [typing, setTyping] = useState(false)
   const [activeScenario, setActiveScenario] = useState(null)
+  const [fallbackCount, setFallbackCount] = useState(0)
 
   const canSend = value.trim().length > 0 && !typing
 
@@ -66,6 +78,7 @@ export default function ChatDemo() {
     setActiveScenario(scenarioId)
     setMessages([])
     setTyping(true)
+    setFallbackCount(0)
     
     // Simulate someone typing the initial message
     const initialText = PREFILL_MESSAGES[scenarioId][lang] || PREFILL_MESSAGES[scenarioId]['en']
@@ -75,7 +88,8 @@ export default function ChatDemo() {
       
       // Simulate bot replying to the initial message
       setTimeout(() => {
-        setMessages((m) => [...m, { from: 'bot', text: reply(initialText, lang) }])
+        const response = reply(initialText, lang, 0)
+        setMessages((m) => [...m, { from: 'bot', text: response.text }])
         setTyping(false)
       }, 700)
     }, 400)
@@ -89,7 +103,11 @@ export default function ChatDemo() {
     setValue('')
     setTyping(true)
     setTimeout(() => {
-      setMessages((m) => [...m, { from: 'bot', text: reply(text, lang) }])
+      const response = reply(text, lang, fallbackCount)
+      if (response.isFallback) {
+        setFallbackCount(prev => prev + 1)
+      }
+      setMessages((m) => [...m, { from: 'bot', text: response.text }])
       setTyping(false)
     }, 700)
   }
