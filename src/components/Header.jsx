@@ -7,7 +7,7 @@ export default function Header() {
   const [open, setOpen] = useState(false)
 
   const links = [
-    ['#why', t.nav_why],
+    ['#architecture', t.nav_platform],
     ['#solutions', t.nav_solutions],
     ['#process', t.nav_process],
     ['#cases', t.nav_cases],
